@@ -4,7 +4,7 @@ Uma **experiência interativa e visual** desenvolvida para apresentar a *Trilha 
 
 O site celebra a biodiversidade, o turismo consciente e o papel das instituições parceiras na preservação ambiental. Tudo isso através de uma interface leve, informativa e com identidade visual conectada à natureza local.
 
-> 🚀 Deploy: [Acessar Projeto no GitHub Pages](https://seu-usuario.github.io/trilha-caminhos-ibiapaba)
+> 🚀 Deploy: [Acessar Projeto no GitHub Pages](https://thalestimbo.github.io/Trilha-Caminhos-da-Ibiapaba/)
 
 ---
 
