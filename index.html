@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Trilha Caminhos da Ibiapaba</title>
+    <meta name="description" content="190km de aventura conectando os Parques Nacionais de Sete Cidades e Ubajara.">
+    
+    <!-- Fontes Google com fallback -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="IMG/Pegada Macaco.png">
+    <link rel="shortcut icon" type="image/png" href="IMG/Pegada Macaco.png">
+    <link rel="apple-touch-icon" href="IMG/Seta macaco guariba.png">
+</head>
+<body>
+    <!-- Header Fixo -->
+    <header class="header-principal" id="header">
+        <nav class="navegacao-container">
+            <!-- Logo -->
+            <div class="logo-container">
+                <div class="logo-placeholder">
+                    <!-- Espaço para logo do Guariba -->
+                    <div class="logo-container-simple" onclick="scrollParaTopo()" role="button" tabindex="0" aria-label="Voltar ao topo">
+                        <img src="IMG/Logo Caminhos da Ibiapaba.png" alt="Logo Caminhos da Ibiapaba" class="logo-imagem">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu Desktop -->
+            <ul class="menu-desktop">
+                <li><a href="#sobre" class="link-menu">Sobre</a></li>
+                <li><a href="#inauguracao" class="link-menu">Inauguração</a></li>
+                <li><a href="#preservacao" class="link-menu">Preservação</a></li>
+                <li><a href="#sinalizacao" class="link-menu">Sinalização</a></li>
+                <li><a href="#galeria" class="link-menu">Galeria</a></li>
+                <li><a href="#parceiros" class="link-menu">Parceiros</a></li>
+                <li><a href="#contato" class="link-menu">Contato</a></li>
+            </ul>
+
+            <!-- Menu Mobile Hambúrguer -->
+            <label class="hamburger" aria-label="Menu de navegação">
+                <input type="checkbox" id="menu-toggle">
+                <svg viewBox="0 0 32 32">
+                    <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+                    <path class="line" d="M7 16 27 16"></path>
+                </svg>
+            </label>
+        </nav>
+
+        <!-- Menu Mobile Expandido -->
+        <div class="menu-mobile" id="menu-mobile">
+            <ul class="menu-mobile-lista">
+                <li><a href="#sobre" class="link-menu-mobile">Sobre</a></li>
+                <li><a href="#inauguracao" class="link-menu-mobile">Inauguração</a></li>
+                <li><a href="#preservacao" class="link-menu-mobile">Preservação</a></li>
+                <li><a href="#sinalizacao" class="link-menu-mobile">Sinalização</a></li>
+                <li><a href="#galeria" class="link-menu-mobile">Galeria</a></li>
+                <li><a href="#parceiros" class="link-menu-mobile">Parceiros</a></li>
+                <li><a href="#contato" class="link-menu-mobile">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Seção Hero / Sobre -->
+    <section class="secao-hero" id="sobre">
+        <div class="hero-background" style="background-image: url('https://jogodopoder.com.br/wp-content/uploads/2025/04/7-cidades_compressed.jpg');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-conteudo">
+            <h1 class="hero-titulo">Trilha Caminhos da Ibiapaba</h1>
+            <p class="hero-subtitulo">190 km de história, natureza e aventura entre Cerrado e Caatinga</p>
+            <p class="hero-descricao">
+                Uma jornada de 190km conectando os Parques Nacionais de Sete Cidades (PI) e Ubajara (CE), 
+                atravessando a majestosa APA Serra da Ibiapaba
+            </p>
+            <button class="botao-cta" onclick="scrollParaSecao('inauguracao')">
+                Saiba Mais
+                <svg class="icone-seta" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M7 13l3 3 7-7"/>
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- Seção Inauguração & História -->
+    <section id="inauguracao" class="secao-inauguracao secao-animada">
+        <div class="container">
+            <div class="inauguracao-grid">
+                <div class="inauguracao-texto">
+                    <h2 class="titulo-secao">Inauguração & História</h2>
+                    <div class="texto-conteudo">
+                        <p>
+                            A Trilha Caminhos da Ibiapaba é o novo atrativo para quem gosta de se aventurar em longas trilhas. 
+                            Com 190 km de extensão, o percurso abrange a APA Serra da Ibiapaba, que engloba 27 municípios 
+                            em uma área de 1,6 milhão de hectares.
+                        </p>
+                        <p>
+                            Inaugurada em 4 de fevereiro durante o Desafio Sete Cidades Trail Run ULTRA 3D – Ubajara, 
+                            a rota revive o trajeto histórico dos tropeiros que conectavam o sertão nordestino, 
+                            carregando consigo histórias de resistência e descobertas.
+                        </p>
+                        <p>
+                            Esta trilha representa mais que um percurso físico: é uma ponte entre biomas, culturas e 
+                            gerações, oferecendo aos aventureiros modernos a oportunidade de caminhar pelos mesmos 
+                            caminhos que moldaram a história do Nordeste brasileiro.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="inauguracao-imagem">
+                    <img src="IMG/IMG especial.png"  alt="Inauguração da Trilha Caminhos da Ibiapaba" loading="lazy">
+                    <div class="imagem-legenda">
+                        Imagem da Trilha 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Conservação & Biomas -->
+    <section class="secao-preservacao" id="preservacao">
+        <div class="container">
+            <h2 class="titulo-secao centralizado">Conservação & Biomas</h2>
+            <p class="subtitulo-secao centralizado">
+                Uma trilha que conecta ecossistemas únicos e promove a conservação da biodiversidade nordestina
+            </p>
+            
+            <div class="cards-preservacao">
+                <!-- Card 1: Conexão -->
+                <div class="card-preservacao">
+                    <div class="card-icone">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-titulo">Conexão Única</h3>
+                    <p class="card-texto">
+                        Liga dois importantes Parques Nacionais: Sete Cidades (PI) e Ubajara (CE), 
+                        criando um corredor ecológico fundamental para a fauna regional.
+                    </p>
+                </div>
+
+                <!-- Card 2: Biomas -->
+                <div class="card-preservacao">
+                    <div class="card-icone">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-titulo">Diversidade de Biomas</h3>
+                    <p class="card-texto">
+                        Atravessa Cerrado, Caatinga e manchas de Mata Atlântica, oferecendo uma 
+                        experiência única de transição entre ecossistemas brasileiros.
+                    </p>
+                </div>
+
+                <!-- Card 3: Guariba -->
+                <div class="card-preservacao">
+                    <div class="card-icone">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-titulo">Símbolo de Proteção</h3>
+                    <p class="card-texto">
+                        A guariba-da-Caatinga (Alouatta ululata) representa nossa missão de 
+                        conservação da biodiversidade e proteção dos habitats naturais.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Botões de Download (Em Breve) -->
+            <div class="downloads-container">
+                <button class="botao-download desabilitado" disabled>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7,10 12,15 17,10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    Em Breve: GPX da Trilha
+                </button>
+                <button class="botao-download desabilitado" disabled>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14,2 14,8 20,8"/>
+                        <line x1="16" y1="13" x2="8" y2="13"/>
+                        <line x1="16" y1="17" x2="8" y2="17"/>
+                        <polyline points="10,9 9,9 8,9"/>
+                    </svg>
+                    Em Breve: Guia PDF
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sinalização da Trilha -->
+    <section id="sinalizacao" class="secao-sinalizacao">
+        <div class="container">
+            <h2 class="titulo-secao centralizado">Sinalização da Trilha</h2>
+            <p class="subtitulo-secao centralizado">
+                Sistema completo de sinalização com setas temáticas e pegadas identificadoras de cada trecho
+            </p>
+            
+            <!-- Setas de Sinalização -->
+            <div class="sinalizacao-container">
+                <h3 class="subtitulo-sinalizacao">Setas Direcionais</h3>
+                <div class="setas-grid">
+                    <div class="seta-card">
+                        <div class="seta-imagem">
+                            <img src="IMG/Seta sete cidades.png" alt="Seta Sete Cidades" loading="lazy">
+                        </div>
+                        <h4>Parque Nacional de Sete Cidades</h4>
+                        <p>Seta com símbolo do lagarto, representando a fauna característica do parque e suas formações rochosas únicas.</p>
+                    </div>
+                    
+                    <div class="seta-card">
+                        <div class="seta-imagem">
+                            <img src="IMG/Seta macaco guariba.png" alt="Seta Caminhos da Ibiapaba" loading="lazy">
+                        </div>
+                        <h4>Trilha Caminhos da Ibiapaba</h4>
+                        <p>Seta principal com o macaco guariba, símbolo oficial da trilha e espécie emblemática da região da Ibiapaba.</p>
+                    </div>
+                    
+                    <div class="seta-card">
+                        <div class="seta-imagem">
+                            <img src="IMG/Seta ubajara.png" alt="Seta Ubajara" loading="lazy">
+                        </div>
+                        <h4>Parque Nacional de Ubajara</h4>
+                        <p>Seta com representação de estalactites e estalagmites, simbolizando as famosas grutas e formações calcárias do parque.</p>
+                    </div>
+                </div>
+                
+                <!-- Pegadas Identificadoras -->
+                <h3 class="subtitulo-sinalizacao">Pegadas Identificadoras</h3>
+                <div class="pegadas-container">
+                    <div class="pegada-item">
+                        <div class="pegada-visual">
+                            <img src="IMG/Pegada Lagarto.png" alt="Pegada Sete Cidades" loading="lazy">
+                        </div>
+                        <h5>Sete Cidades</h5>
+                        <p>Pegada característica do trecho inicial</p>
+                    </div>
+                    
+                    <div class="pegada-item">
+                        <div class="pegada-visual">
+                            <img src="IMG/Pegada Macaco.png" alt="Pegada Ibiapaba" loading="lazy">
+                        </div>
+                        <h5>Caminhos da Ibiapaba</h5>
+                        <p>Pegada do trecho central da trilha</p>
+                    </div>
+                    
+                    <div class="pegada-item">
+                        <div class="pegada-visual">
+                            <img src="IMG/Pegada ubajara.png" alt="Pegada Ubajara" loading="lazy">
+                        </div>
+                        <h5>Parque Nacional de Ubajara</h5>
+                        <p>Pegada do trecho final da trilha</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Galeria Expandida -->
+    <section id="galeria" class="secao-galeria secao-animada">
+        <div class="container">
+            <h2 class="titulo-secao centralizado">Galeria de Imagens</h2>
+            <p class="subtitulo-secao centralizado">
+                Conheça as belezas naturais, trilhas, cachoeiras e grutas do Parque Nacional de Ubajara e da Serra da Ibiapaba.
+            </p>
+            
+            <!-- Grid de Fotos - Prévia -->
+            <div class="galeria-grid" id="galeria-grid">
+                <!-- Primeiras 6 imagens (prévia) -->
+                <div class="galeria-item" data-index="0">
+                    <img src="IMG/Galeria/IMG 01.jpg" alt="Trilha na Serra da Ibiapaba" loading="lazy">
+                </div>
+                
+                <div class="galeria-item" data-index="1">
+                    <img src="IMG/Galeria/IMG 02.jpg" alt="Cachoeira do Ubajara" loading="lazy">
+                </div>
+                
+                <div class="galeria-item" data-index="2">
+                    <img src="IMG/Galeria/IMG 03.jpg" alt="Gruta do Ubajara" loading="lazy">
+                </div>
+                
+                <div class="galeria-item" data-index="3">
+                    <img src="IMG/Galeria/IMG 04.jpg" alt="Vista do Parque Sete Cidades" loading="lazy">
+                </div>
+                
+                <div class="galeria-item" data-index="4">
+                    <img src="IMG/Galeria/IMG 05.jpg" alt="Flora da Caatinga" loading="lazy">
+                </div>
+                
+                <div class="galeria-item" data-index="5">
+                    <img src="IMG/Galeria/IMG 06.jpg" alt="Pôr do sol na Serra" loading="lazy">
+                </div>
+            </div>
+            
+            <!-- Grid Expandido (inicialmente oculto) -->
+            <div class="galeria-grid-expandida" id="galeria-expandida">
+                <!-- Imagens adicionais serão carregadas dinamicamente -->
+            </div>
+            
+            <!-- Botão Ver Mais -->
+            <div class="galeria-ver-mais" id="galeria-ver-mais">
+                <button class="btn-ver-mais" onclick="expandirGaleria()">
+                    <span class="btn-texto">Ver mais fotos</span>
+                    <span class="btn-icone">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <polyline points="6,9 12,15 18,9"></polyline>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+            
+
+        </div>
+    </section>
+
+    <!-- Seção Parceiros Atualizada -->
+    <section id="parceiros" class="secao-parceiros secao-animada">
+        <div class="container">
+            <h2 class="titulo-secao centralizado" style="color: var(--cor-primaria); margin-bottom: 3rem;">Parceiros e Apoiadores</h2>
+        
+            <!-- Financiamento -->
+            <div class="categoria-parceiros">
+                <h3 class="categoria-titulo">Financiamento</h3>
+                <div class="parceiros-grid">
+                    <div class="parceiro-card">
+                        <img src="IMG/Logo Gov.png" alt="Governo Federal do Brasil" loading="lazy">
+                        <h4>Governo Federal do Brasil</h4>
+                        <p>Apoio institucional e financeiro para o desenvolvimento da trilha de longa distância.</p>
+                    </div>
+                    
+                    <div class="parceiro-card">
+                        <img src="IMG/Logo Ministerio meio ambiente.png" alt="Ministério do Meio Ambiente" loading="lazy">
+                        <h4>Ministério do Meio Ambiente e Mudança do Clima</h4>
+                        <p>Coordenação das políticas ambientais e apoio às unidades de conservação.</p>
+                    </div>
+                    
+                    <div class="parceiro-card">
+                        <img src="IMG/gef-terrestre.png" alt="GEF Terrestre" loading="lazy">
+                        <h4>GEF Terrestre</h4>
+                        <p>Fundo Global para o Meio Ambiente - Programa Terrestre de conservação da biodiversidade.</p>
+                    </div>
+                    
+                    <div class="parceiro-card">
+                        <img src="IMG/FUNBIO logo.jpg" alt="FUNBIO" loading="lazy">
+                        <h4>Fundo Brasileiro para a Biodiversidade (FUNBIO)</h4>
+                        <p>Financiamento de projetos de conservação e uso sustentável da biodiversidade brasileira.</p>
+                    </div>
+                    
+                    <div class="parceiro-card">
+                        <img src="IMG/Banco Interamericano de Desenvolvimento (BID) LOGO.jpg" alt="BID" loading="lazy">
+                        <h4>Banco Interamericano de Desenvolvimento (BID)</h4>
+                        <p>Apoio financeiro para projetos de desenvolvimento sustentável na América Latina.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Execução -->
+            <div class="categoria-parceiros">
+                <h3 class="categoria-titulo">Execução</h3>
+                <div class="parceiros-grid">
+                    <div class="parceiro-card">
+                        <img src="IMG/Logo IBAM.jpg" alt="IBAM" loading="lazy">
+                        <h4>IBAM</h4>
+                        <p>Instituto Brasileiro de Administração Municipal.</p>
+                    </div>
+                    
+                    <div class="parceiro-card">
+                        <img src="IMG/Logo ICMBio.png" alt="ICMBio" loading="lazy">
+                        <h4>ICMBio</h4>
+                        <p>Instituto Chico Mendes de Conservação da Biodiversidade.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Apoio -->
+            <div class="categoria-parceiros">
+                <h3 class="categoria-titulo">Apoio</h3>
+                <div class="parceiros-grid">
+                    <div class="parceiro-card">
+                        <img src="IMG/Logo 7 cidades.jpeg" alt="Parque Nacional de Sete Cidades" loading="lazy">
+                        <h4>Parque Nacional de Sete Cidades</h4>
+                        <p>Ponto de partida da trilha, famoso por suas formações rochosas e sítios arqueológicos.</p>
+                    </div>
+                    
+                    <div class="parceiro-card">
+                        <img src="IMG/Logo Ubajara Parque.jpg" alt="Parque Nacional de Ubajara" loading="lazy">
+                        <h4>Parque Nacional de Ubajara</h4>
+                        <p>Destino final da trilha, conhecido pela gruta e biodiversidade da Serra da Ibiapaba.</p>
+                    </div>
+                    
+                    <div class="parceiro-card">
+                        <img src="IMG/Logo APA.png" alt="APA da Ibiapaba" loading="lazy">
+                        <h4>APA da Ibiapaba</h4>
+                        <p>Área de Proteção Ambiental que abrange todo o percurso da trilha entre os dois parques.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Seção Contato & Newsletter -->
+    <section id="contato" class="secao-contato secao-animada">
+        <div class="container">
+            <div class="contato-grid">
+                <div class="contato-info">
+                    <h2 class="titulo-secao">Entre em Contato</h2>
+                    <p class="contato-descricao">
+                        Tem dúvidas sobre a trilha? Quer saber mais sobre os percursos ou como se preparar? 
+                        Entre em contato conosco!
+                    </p>
+                    
+                    <div class="contato-detalhes">
+                        <div class="contato-item">
+                            <svg class="contato-icone" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <div>
+                                <h4>Localização</h4>
+                                <p>APA Serra da Ibiapaba<br>Piauí - Ceará</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contato-item">
+                            <svg class="contato-icone" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            <div>
+                                <h4>Telefone</h4>
+                                <p>(85) 99609-6588</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contato-item">
+                            <svg class="contato-icone" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            <div>
+                                <h4>E-mail</h4>
+                                <p>contato@caminhosibiapaba.com.br</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contato-formulario">
+                    <form class="formulario" id="formulario-contato">
+                        <div class="campo-grupo">
+                            <label for="nome" class="campo-label">Nome Completo</label>
+                            <input type="text" id="nome" name="nome" class="campo-input" required>
+                        </div>
+                        
+                        <div class="campo-grupo">
+                            <label for="email" class="campo-label">E-mail</label>
+                            <input type="email" id="email" name="email" class="campo-input" required>
+                        </div>
+                        
+                        <div class="campo-grupo">
+                            <label for="telefone" class="campo-label">Telefone (opcional)</label>
+                            <input type="tel" id="telefone" name="telefone" class="campo-input">
+                        </div>
+                        
+                        <div class="campo-grupo">
+                            <label for="mensagem" class="campo-label">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" class="campo-textarea" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="botao-enviar">
+                            Enviar Mensagem
+                            <svg class="icone-enviar" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <line x1="22" y1="2" x2="11" y2="13"/>
+                                <polygon points="22,2 15,22 11,13 2,9 22,2"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Atualizado -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-conteudo">
+                <div class="footer-logo">
+                    <div class="logo-placeholder">
+                        <img src="IMG/Logo Caminhos da Ibiapaba Preto.png" alt="Logo Caminhos da Ibiapaba" class="footer-logo-imagem">
+                    </div>
+                    <div>
+                        <h3>Caminhos da Ibiapaba</h3>
+                    </div>
+                </div>
+                
+                <div class="footer-info">
+                    <p>&copy; 2025 Trilha Caminhos da Ibiapaba. Todos os direitos reservados.</p>
+                    <p>Uma iniciativa de conservação e turismo sustentável na APA Serra da Ibiapaba.</p>
+                    
+                    <div class="footer-creditos">
+                        <div class="credito-grupo">
+                            <strong>Execução:</strong> IBAM • ICMBio
+                        </div>
+                        <div class="credito-grupo">
+                            <strong>Apoio:</strong> Parque Nacional de Sete Cidades • Parque Nacional de Ubajara • APA da Ibiapaba
+                        </div>
+                        <div class="credito-grupo">
+                            <strong>Financiamento:</strong> GEF Terrestre • FUNBIO • BID • Ministério do Meio Ambiente • Governo Federal
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox-overlay" id="lightbox-overlay">
+        <div class="lightbox-container">
+            <img class="lightbox-imagem" id="lightbox-imagem" src="" alt="">
+            
+            <!-- Botão de fechar -->
+            <button class="lightbox-fechar" id="lightbox-fechar" aria-label="Fechar imagem">
+                ×
+            </button>
+            
+            <!-- Botões de navegação -->
+            <button class="lightbox-nav anterior" id="lightbox-anterior" aria-label="Imagem anterior">
+                ←
+            </button>
+            <button class="lightbox-nav proximo" id="lightbox-proximo" aria-label="Próxima imagem">
+                →
+            </button>
+            
+            <!-- Indicador de posição -->
+            <div class="lightbox-indicador" id="lightbox-indicador">
+                1 / 22
+            </div>
+        </div>
+    </div>
+
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="https://wa.me/+5585996096588" class="whatsapp-flutuante" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+        </svg>
+    </a>
+
+    <!-- Script JavaScript -->
+    <script src="scripts.js"></script>
+</body>
+</html>
