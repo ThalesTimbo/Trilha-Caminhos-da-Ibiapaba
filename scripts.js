@@ -872,6 +872,17 @@ function inicializarLightbox() {
   const proximo = document.getElementById("lightbox-proximo")
   const indicador = document.getElementById("lightbox-indicador")
 
+  // Garantir que o botão de fechar seja sempre visível
+  if (fechar) {
+    fechar.style.display = "flex"
+    fechar.style.visibility = "visible"
+    fechar.style.opacity = "1"
+    fechar.style.zIndex = "10002"
+    fechar.style.position = "fixed"
+    fechar.style.top = "20px"
+    fechar.style.right = "20px"
+  }
+
   // Remover event listeners antigos para evitar duplicação
   const galeriaItems = document.querySelectorAll(".galeria-item img")
   galeriaItems.forEach(img => {
@@ -958,6 +969,7 @@ function abrirLightbox(index) {
   const overlay = document.getElementById("lightbox-overlay")
   const imagem = document.getElementById("lightbox-imagem")
   const indicador = document.getElementById("lightbox-indicador")
+  const fechar = document.getElementById("lightbox-fechar")
 
   // Carregar imagem
   imagem.src = todasImagens[index].src
@@ -970,6 +982,14 @@ function abrirLightbox(index) {
   overlay.classList.add("ativo")
   document.body.style.overflow = "hidden"
 
+  // Garantir que o botão de fechar seja visível
+  if (fechar) {
+    fechar.style.display = "flex"
+    fechar.style.visibility = "visible"
+    fechar.style.opacity = "1"
+    fechar.style.zIndex = "10002"
+  }
+
   // Atualizar estado dos botões de navegação
   atualizarBotoesNavegacao()
 }
@@ -977,10 +997,19 @@ function abrirLightbox(index) {
 // Fechar lightbox
 function fecharLightbox() {
   const overlay = document.getElementById("lightbox-overlay")
+  const fechar = document.getElementById("lightbox-fechar")
   
   overlay.classList.remove("ativo")
   document.body.style.overflow = ""
   lightboxAtivo = false
+
+  // Resetar estilos do botão de fechar
+  if (fechar) {
+    fechar.style.display = ""
+    fechar.style.visibility = ""
+    fechar.style.opacity = ""
+    fechar.style.zIndex = ""
+  }
 }
 
 // Navegar entre imagens

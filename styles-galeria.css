@@ -202,31 +202,47 @@
   height: auto;
 }
 
-/* Botão de fechar */
+/* Botão de fechar - CORRIGIDO para garantir visibilidade em todas as telas */
+/* Problema anterior: top: -50px causava o botão ficar fora da tela em desktops */
+/* Solução: position: fixed com posicionamento absoluto no canto superior direito */
 .lightbox-fechar {
-  position: absolute;
-  top: -50px;
-  right: 0;
-  width: 40px;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.2);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  z-index: 10000;
+  position: fixed !important;
+  top: 20px !important;
+  right: 20px !important;
+  width: 50px !important;
+  height: 50px !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 2px solid rgba(255, 255, 255, 0.8) !important;
+  border-radius: 50% !important;
+  color: #333 !important;
+  font-size: 24px !important;
+  font-weight: bold !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.3s ease !important;
+  z-index: 10002 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .lightbox-fechar:hover {
-  background: rgba(255, 255, 255, 0.3);
-  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 1);
+  border-color: rgba(255, 255, 255, 1);
   transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.lightbox-fechar:focus {
+  outline: 3px solid rgba(107, 142, 35, 0.6);
+  outline-offset: 2px;
+}
+
+.lightbox-fechar:focus-visible {
+  outline: 3px solid rgba(107, 142, 35, 0.8);
+  outline-offset: 3px;
 }
 
 /* Botões de navegação */
@@ -645,6 +661,28 @@
 
 /* === RESPONSIVIDADE === */
 
+/* Media query para telas grandes - garantir visibilidade do botão de fechar */
+@media (min-width: 1024px) {
+  .lightbox-fechar {
+    top: 30px;
+    right: 30px;
+    width: 55px;
+    height: 55px;
+    font-size: 26px;
+  }
+}
+
+/* Media query para telas muito grandes (4K, etc.) */
+@media (min-width: 1920px) {
+  .lightbox-fechar {
+    top: 40px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+  }
+}
+
 @media (max-width: 768px) {
   .setas-grid {
     grid-template-columns: 1fr;
@@ -696,11 +734,11 @@
   }
 
   .lightbox-fechar {
-    top: 10px;
-    right: 10px;
-    width: 35px;
-    height: 35px;
-    font-size: 16px;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
   }
 
   .lightbox-indicador {
@@ -776,9 +814,11 @@
   }
 
   .lightbox-fechar {
-    width: 30px;
-    height: 30px;
-    font-size: 14px;
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
   }
 }
 
@@ -906,9 +946,11 @@
   }
 
   .lightbox-fechar {
-    width: 25px;
-    height: 25px;
-    font-size: 10px;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
   }
 }
 
