@@ -92,7 +92,7 @@
                     <h2 class="titulo-secao">Inauguração & História</h2>
                     <div class="texto-conteudo">
                         <p>
-                            A Trilha Caminhos da Ibiapaba é um novo percurso de 190 km que atravessa a Área de Proteção Ambiental da Serra da Ibiapaba, ligando 27 municípios em uma das regiões mais ricas em biodiversidade e cultura do Nordeste.
+                            A Trilha Caminhos da Ibiapaba é um novo percurso de 190 km que atravessa a Área de Proteção Ambiental da Serra da Ibiapaba, ligando 6 municípios em uma das regiões mais ricas em biodiversidade e cultura do Nordeste.
                         </p>
                         <p>
                             Inspirada nos antigos caminhos dos tropeiros, a trilha convida aventureiros a explorar paisagens naturais impressionantes, conhecer comunidades tradicionais e mergulhar em histórias que ajudaram a moldar a identidade da região.
@@ -250,7 +250,7 @@
                     
                     <div class="pegada-item">
                         <div class="pegada-visual">
-                            <img src="IMG/Pegada ubajara.png" alt="Pegada Ubajara" loading="lazy">
+                            <img src="IMG/Pegada Ubajara.png" alt="Pegada Ubajara" loading="lazy">
                         </div>
                         <h5>Parque Nacional de Ubajara</h5>
                         <p>Pegada do trecho final da trilha</p>
@@ -444,14 +444,20 @@
                             </svg>
                             <div>
                                 <h4>E-mail</h4>
-                                <p>contato@caminhosibiapaba.com.br</p>
+                                <p>educiadaaventura@gmail.com</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="contato-formulario">
-                    <form class="formulario" id="formulario-contato">
+                    <form class="formulario" id="formulario-contato" action="https://formsubmit.co/educiadaaventura@gmail.com" method="POST">
+                        <!-- Campos ocultos do FormSubmit -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="">
+                        <input type="hidden" name="_subject" value="Nova mensagem do site Caminhos da Ibiapaba">
+                        <input type="hidden" name="_template" value="table">
+                        
                         <div class="campo-grupo">
                             <label for="nome" class="campo-label">Nome Completo</label>
                             <input type="text" id="nome" name="nome" class="campo-input" required>

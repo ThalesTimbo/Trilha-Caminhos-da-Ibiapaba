@@ -470,9 +470,14 @@ function inicializarFormulario() {
   const formulario = document.getElementById("formulario-contato")
 
   if (formulario) {
-    formulario.addEventListener("submit", function (e) {
-      e.preventDefault()
+    // Configurar URL de redirecionamento após envio
+    const currentUrl = window.location.href
+    const nextInput = formulario.querySelector('input[name="_next"]')
+    if (nextInput) {
+      nextInput.value = currentUrl + '?enviado=true'
+    }
 
+    formulario.addEventListener("submit", function (e) {
       // Coletar dados do formulário
       const formData = new FormData(this)
       const dados = {
@@ -484,31 +489,37 @@ function inicializarFormulario() {
 
       // Validação básica
       if (!dados.nome || !dados.email || !dados.mensagem) {
+        e.preventDefault()
         mostrarMensagem("Por favor, preencha todos os campos obrigatórios.", "erro")
-        return
+        return false
       }
 
       // Validar email
       if (!validarEmail(dados.email)) {
+        e.preventDefault()
         mostrarMensagem("Por favor, insira um e-mail válido.", "erro")
-        return
+        return false
       }
 
-      // Simular envio (aqui você integraria com seu backend)
+      // Mostrar feedback de envio
       const botaoEnviar = this.querySelector(".botao-enviar")
       const textoOriginal = botaoEnviar.innerHTML
 
       botaoEnviar.innerHTML = "Enviando..."
       botaoEnviar.disabled = true
 
-      // Simular delay de envio
-      setTimeout(() => {
-        mostrarMensagem("Mensagem enviada com sucesso! Entraremos em contato em breve.", "sucesso")
-        formulario.reset()
-        botaoEnviar.innerHTML = textoOriginal
-        botaoEnviar.disabled = false
-      }, 2000)
+      // O formulário será enviado normalmente para o FormSubmit
+      // Se houver erro, o FormSubmit redirecionará de volta
+      mostrarMensagem("Enviando sua mensagem...", "info")
     })
+
+    // Verificar se foi redirecionado após envio bem-sucedido
+    const urlParams = new URLSearchParams(window.location.search)
+    if (urlParams.get('enviado') === 'true') {
+      mostrarMensagem("Mensagem enviada com sucesso! Entraremos em contato em breve.", "sucesso")
+      // Limpar parâmetro da URL
+      window.history.replaceState({}, document.title, window.location.pathname)
+    }
   }
 }
 

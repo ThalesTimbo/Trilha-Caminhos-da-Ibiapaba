@@ -1021,6 +1021,10 @@ section {
   background: #dc3545;
 }
 
+.mensagem-feedback.info {
+  background: #17a2b8;
+}
+
 @keyframes slideInRight {
   from {
     transform: translateX(100%);
